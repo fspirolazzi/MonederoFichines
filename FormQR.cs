@@ -60,6 +60,12 @@ namespace MonederoFichines
                     {
                         status = true;
                         Console.WriteLine("Se encontro el pago de la siguiente orden: " + orden.external_reference);
+						
+						    arduino = serial.Serial("COM1", 9600)
+							time.sleep(2)
+							arduino.write("pagoefectuado")
+							arduino.close()
+						
                     }
                 }
                 sw.Stop();
